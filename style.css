@@ -97,6 +97,7 @@ h1, h2, h3{
 
  .header-content{
      padding-right: 4rem;
+     padding-bottom: 5rem;
  }
 
 .header-content h1{
@@ -124,7 +125,7 @@ h1, h2, h3{
     height: 40px;
     background-color: var(--light-color);
     margin-right: 1rem;
-    border-radius: 3rem;
+    border-radius: .3rem;
     box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.2);
     transition: var(--transition);
 }
@@ -171,21 +172,49 @@ h1, h2, h3{
 .title h2::after{
     position: absolute;
     content: "";
-    top: 120%;
+    top: 100%;
     left: 0;
     width: 70px;
     height: 4px;
     background-color: var(--dark-color);
 }
 
+#work{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("../img/fly.jpeg") center/ cover no-repeat fixed;
+    color: var(--light-color)
+}
+#work .title h2, #work h3{
+    color: var(--light-color);
+}
+#work .title h2::after{
+     background-color: var(--light-color);
+}
+  .work-bottom{
+       margin-top: 4rem;
+       text-align: center;
+  }
 
+  .work-bottom > div .icon img{
+    width: 50px;
+    margin: 0 auto 1.7rem auto;
+  }
+
+ 
+/* Media Queries */
+@media(min-width: 450px){
+      .work-bottom{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 0;
+      }
+    }
 @media(min-width: 576px){
     .title h2{
         font-size: 4rem;
     }
-}
-
-/* Media Queries */
+    .work-bottom{
+        grip-template-columns: repaet(4, 1);
+    }
 @media(min-width: 768px){
     .header-content h1{
         font-size: 7rem;
